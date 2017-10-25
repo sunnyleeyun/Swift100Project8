@@ -11,7 +11,9 @@ import UIKit
 class AddItemViewController: UIViewController {
   
   @IBOutlet weak var textView: UITextView!
-  weak var delegate: ViewController!
+  
+  // MARK: - Properties
+  var movie: Movie?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,7 +30,7 @@ class AddItemViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "save",
       let newMovie = textView.text {
-        
+      movie = Movie(movieName: newMovie)
     }
   }
   

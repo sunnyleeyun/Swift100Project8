@@ -37,6 +37,11 @@ extension ViewController{
   }
   
   @IBAction func savePlayerDetail(_ segue: UIStoryboardSegue) {
+    guard let addItemViewController = segue.source as? AddItemViewController,
+          let movie = addItemViewController.movie else { return }
+    movies.append(movie)
+    let indexPath = IndexPath(row: movies.count - 1, section: 0)
+    tableView.insertRows(at: [indexPath], with: .automatic)
   }
 }
 extension ViewController: UITableViewDataSource, UITableViewDelegate{

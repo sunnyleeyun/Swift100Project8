@@ -12,4 +12,5 @@ struct Movie {
   
   // MARK: - Property (Properties)
   var movieName: String?
+  
 }
