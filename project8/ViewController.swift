@@ -40,18 +40,15 @@ extension ViewController{
   }
 }
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
-  func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return movies.count
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieCell
     
-    cell.textLabel?.text = movies[indexPath.row]
-    cell.accessoryType = .disclosureIndicator
-    
+    let movie = movies[indexPath.row]
+    cell.movie = movie
     return cell
   }
 }
