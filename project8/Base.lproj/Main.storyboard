@@ -59,7 +59,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="VoZ-sU-wI0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="3Ny-Sz-hI9"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="knR-6p-UIP">
                             <connections>
                                 <segue destination="1wt-92-KSL" kind="presentation" id="pXr-Fa-Iqu"/>

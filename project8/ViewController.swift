@@ -44,7 +44,7 @@ extension ViewController{
     tableView.insertRows(at: [indexPath], with: .automatic)
   }
 }
-extension ViewController: UITableViewDataSource, UITableViewDelegate{
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return movies.count
@@ -56,5 +56,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     cell.movie = movie
     return cell
   }
+  
+  
+  
 }
-
